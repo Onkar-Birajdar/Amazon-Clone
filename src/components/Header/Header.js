@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; 
+import {Link} from "react-router-dom";
 import "./Header.css";
 function Header() {
     return (
@@ -9,8 +10,8 @@ function Header() {
                     src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
                     alt="amazon logo"
                 />
-        </link>
-        
+            </link>
+            <h1> Hello world</h1>
         </div>
     );
 }
