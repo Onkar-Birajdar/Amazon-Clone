@@ -5,14 +5,16 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
+import Home from "./components/Home/Home";
 function App() {
     return (
         <Router>
             <div className="app">
                 <Routes>
-                    <Route exact path="checkout" element={<Checkout />}></Route>
+                    <Route path="/checkout" element={ <Checkout />}></Route>
                     <Route exact path="login" element={<Login />}></Route>
-                    <Route exact path="/" element={<Header />}></Route>
+                    <Route exact path="/" element={[<Header />,<Home />]}></Route>
+
                 </Routes>
             </div>
         </Router>
