@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 function Header() {
     return (
-        <div className="header">
+        <nav className="header">
             <Link to="/">
                 <img
                     className="header__logo"
@@ -12,7 +12,9 @@ function Header() {
                     alt="amazon logo"
                 />
             </Link>
-        </div>
+            
+            
+        </nav>
     );
 }
 
