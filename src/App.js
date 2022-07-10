@@ -11,10 +11,16 @@ function App() {
         <Router>
             <div className="app">
                 <Routes>
-                    <Route path="/checkout" element={ <Checkout />}></Route>
+                    <Route
+                        path="/checkout"
+                        element={[<Header />, <Checkout />]}
+                    ></Route>
                     <Route exact path="login" element={<Login />}></Route>
-                    <Route exact path="/" element={[<Header />,<Home />]}></Route>
-
+                    <Route
+                        exact
+                        path="/"
+                        element={[<Header />, <Home />]}
+                    ></Route>
                 </Routes>
             </div>
         </Router>
