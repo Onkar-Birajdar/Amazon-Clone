@@ -15,7 +15,7 @@ function Subtotal() {
                         <p>
                             {/* {pull the subtotal from the value} */}
                             Subtotal ({basket?.length} items):
-                            <strong>{getBasketTotal(basket)}</strong>
+                            <strong>{value}</strong>
                         </p>
                         <small className="subtotal__gift">
                             <input type="checkbox" />
@@ -25,7 +25,7 @@ function Subtotal() {
                 )}
                 decimalScale={2}
                 // {pull the value}
-                value={0}
+                value={getBasketTotal(basket)}
                 displayType={"text"}
                 thousandSeparator={true}
                 prefix={"$"}

@@ -2,12 +2,12 @@ import React from "react";
 import "./CheckoutProduct.css";
 
     
-function CheckoutProduct(id, title, image, price, rating) {
+function CheckoutProduct({ id, image, title, price, rating }) {
     return (
         <div className="CheckoutProduct">
-            <img src={image} alt="product" />
+            <img className="checkoutProduct__image" src={ image } alt="product" />
 
-            <div className="checkoutProduct__info">
+            <div className="checkoutProduct__info" >
                 <p className="checkoutProduct__title">{title}</p>
                 <p className="checkoutProduct__price">
                     <small>$</small>
