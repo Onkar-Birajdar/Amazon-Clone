@@ -5,8 +5,8 @@ import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 
 import Subtotal from "../Subtotal/Subtotal.js";
 
-function Checkout() {
-    const [{ basket }] = useStateValue();
+function Checkout({ id, title, image, price, rating }) {
+    const [{ basket } ] = useStateValue();
     return (
         <div className="checkout">
             <div className="checkout__left">
