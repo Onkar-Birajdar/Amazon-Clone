@@ -3,7 +3,11 @@ import "./Login.css";
 
 function Login() {
   return (
-    <div>Login</div>
+    <div>
+      <h2>Hello, SingIn</h2>
+      <h2>SinUp</h2>
+      
+    </div>
   )
 }
 
