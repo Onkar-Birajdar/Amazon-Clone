@@ -6,7 +6,7 @@ import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
 import Subtotal from "../Subtotal/Subtotal.js";
 
 function Checkout({ id, title, image, price, rating }) {
-    const [{ basket } ] = useStateValue();
+    const [{ basket,user } ] = useStateValue();
     return (
         <div className="checkout">
             <div className="checkout__left">
@@ -18,6 +18,7 @@ function Checkout({ id, title, image, price, rating }) {
 
                 {basket?.length === 0 ? (
                     <div>
+                        <h3>Hello, {user?.email}</h3>
                         <h2>Your Shopping Basket is empty</h2>
                         <p>
                             You have no items in your basket. To buy one or more
