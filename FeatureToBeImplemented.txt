@@ -1,0 +1,1 @@
+In the checkout page try implementing "Flip Move" animation for the cart items.
