@@ -10,9 +10,18 @@ import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
 import Payment from "./components/Payment/Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements} from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51LZF1LSHwP10zuQSha4t2gTIDDxqH7Nwrl06xKTM0hGwHjUw5dEFw6Z8zgZAKACpY9EvLUvuGW7PQxYqiL1NlK4q003ofxQDQv"
+);
 
 function App() {
     const [{}, dispatch] = useStateValue();
+
+    // const stripe = useStripe();	    
+    // const elements = useElements();
 
     useEffect(() => {
         auth.onAuthStateChanged((authUser) => {
@@ -42,9 +51,14 @@ function App() {
                         element={[<Header />, <Checkout />]}
                     ></Route>
                     <Route
-                        exact
+                        
                         path="/payment"
-                        element={[<Header />, <Payment />]}
+                        element={[
+                            <Header />,
+                            <Elements stripe={promise}>
+                                <Payment />
+                            </Elements>,
+                        ]}
                     ></Route>
                     <Route exact path="login" element={<Login />}></Route>
                     <Route
