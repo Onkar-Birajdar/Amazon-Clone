@@ -6,6 +6,7 @@ import { db } from "./firebase";
 import { useStateValue } from "./StateProvider";
 
 import Header from "./components/Header/Header";
+import Orders from "./components/Orders/Orders";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
@@ -51,7 +52,11 @@ function App() {
                         element={[<Header />, <Checkout />]}
                     ></Route>
                     <Route
-                        
+                        exact
+                        path="/orders"
+                        element={[<Header />, <Orders />]} 
+                    ></Route>
+                    <Route
                         path="/payment"
                         element={[
                             <Header />,
