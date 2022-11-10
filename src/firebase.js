@@ -1,17 +1,21 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Import the functions you need from the SDKs you need
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBZbsGeSCKk9xwSnrwWUvAeNqas39GCKVA",
-    authDomain: "clone-clash-coder-3d740.firebaseapp.com",
-    projectId: "clone-clash-coder-3d740",
-    storageBucket: "clone-clash-coder-3d740.appspot.com",
-    messagingSenderId: "302347733586",
-    appId: "1:302347733586:web:9dbf2b5aa8913e9c7aad8b",
-    measurementId: "G-PTXHTR9RLX",
+    apiKey: "AIzaSyDRDz_inNdXKrwFdFcaf4Z6YQb_gt49OB0",
+    authDomain: "vocal-for-local-be065.firebaseapp.com",
+    projectId: "vocal-for-local-be065",
+    storageBucket: "vocal-for-local-be065.appspot.com",
+    messagingSenderId: "135124111373",
+    appId: "1:135124111373:web:d73c2972dd53af83324544",
+    measurementId: "G-54BLD6NG6R",
 };
+
+// Initialize Firebase
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -20,4 +24,3 @@ const db = firebaseApp.firestore();
 const auth = firebase.auth();
 
 export { db, auth };
-
